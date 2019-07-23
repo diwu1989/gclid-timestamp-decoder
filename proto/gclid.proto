@@ -1,0 +1,45 @@
+syntax = "proto2";
+
+package gclid_decoder;
+
+message GClIdv1 {
+ message Nesting3 {
+  required int64 val1 = 1;
+  required bytes val2 = 2;
+  required bytes val3 = 3;
+ }
+ 
+ message Nesting2 {
+  required Nesting3 n1 = 1;
+  required int64 val2 = 2;
+  required int64 val3 = 3;
+  required int64 val4 = 4;
+ }
+
+ message Nesting1 {
+  required Nesting2 n1 = 1;
+  required bytes val1 = 2;
+ }
+
+ required int64 val1 = 2;
+ required Nesting1 n1 = 3;
+ required int64 val2 = 16382;
+ 
+} 
+
+message GClIdv2 {
+ message Nesting2 {
+  required int64 val1 = 1;
+  required int64 val2 = 2;
+ }
+ message Nesting1 {
+  required Nesting2 n2 = 1;
+  required bytes b1 = 2;
+  required bytes b2 = 3;
+ }
+
+ required Nesting1 n1 = 1;
+ required int64 val1 = 2;
+ required int64 val2 = 16382;
+} 
+
