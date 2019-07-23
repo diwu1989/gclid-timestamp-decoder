@@ -21,7 +21,10 @@ def convert_to_dt_v2(g):
     return datetime.datetime.fromtimestamp(g.n1.n2.val1)
 
 def get_timestamp_from_gclid(gclid):
-    if len(gclid) > 60:
-        return convert_to_dt_v2(decode_v2(gclid))
-    else:
-        return convert_to_dt_v1(decode_v1(gclid))
+    try:
+        if len(gclid) > 60:
+            return convert_to_dt_v2(decode_v2(gclid))
+        else:
+            return convert_to_dt_v1(decode_v1(gclid))
+    except:
+        return None
