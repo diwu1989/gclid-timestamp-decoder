@@ -28,3 +28,11 @@ def get_timestamp_from_gclid(gclid):
             return convert_to_dt_v1(decode_v1(gclid))
     except:
         return None
+
+def decode_gclid(gclid):
+    try:
+        if len(gclid) > 60:
+            return decode_v2(gclid)
+        return decode_v1(gclid)
+    except:
+        return None
