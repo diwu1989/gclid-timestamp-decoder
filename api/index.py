@@ -8,6 +8,7 @@ class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         s = self.path
         dic = dict(parse.parse_qsl(parse.urlsplit(s).query))
+        ts = None
         if "gclid" in dic:
             ts = get_timestamp_from_gclid(dic["gclid"])
             if ts is None:
