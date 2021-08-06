@@ -2,7 +2,8 @@ from gclid_timestamp_decoder.decode import get_timestamp_from_gclid, decode_gcli
 
 gclids = [
     "EAIaIQobChMIl4Pcqteb8gIV9Al9Ch1BmgjCEAAYASAAEgLCtfD_BwE",
-    "EAIaIQobChMIsOuZ1NWb8gIV0TytBh1EUQfSEAAYASAAEgJ2l_D_BwE"
+    "EAIaIQobChMIsOuZ1NWb8gIV0TytBh1EUQfSEAAYASAAEgJ2l_D_BwE",
+    "EAIaIQobChMIyN7I3d-b8gIVTquWCh244gGPEAAYAiAAEgKCHvD_BwE"
 ]
 
 for gclid in gclids:
